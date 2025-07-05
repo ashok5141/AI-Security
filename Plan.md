@@ -106,4 +106,4 @@
 - Try hands-on testing with open-source LLMs (e.g., LLaMA, Mistral).
 - Join communities like [AI Village](https://www.aivillage.org/) or [MLSecOps](https://mlsecops.com/).
 - Stay updated with newsletters like [Import AI](https://www.importai.com/).
-
+ 
