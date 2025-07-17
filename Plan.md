@@ -107,3 +107,109 @@
 - Join communities like [AI Village](https://www.aivillage.org/) or [MLSecOps](https://mlsecops.com/).
 - Stay updated with newsletters like [Import AI](https://www.importai.com/).
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Resume
+```bash
+Ashok R
+Email: ashokrmsec@gmail.com | Phone: +1 (337) 255-4378  
+LinkedIn: linkedin.com/in/ashokreddyz | Portfolio: ashok5141.github.io  
+
+SUMMARY  
+Security Engineer with 6+ years in application and cloud security, specializing in secure SDLC, threat modeling, and DevSecOps automation. Proven ability to reduce vulnerabilities pre-production, secure cloud-native applications, and build scalable pipelines across AWS environments. OSCP candidate passionate about security tooling, leadership, and delivering measurable risk reduction.
+
+SKILLS  
+• Secure Code Review: Java, Python, JavaScript, OWASP Top 10, SAST/DAST, IAST  
+• Cloud Security: AWS (IAM, KMS, Lambda, S3, EC2), Terraform, Prowler, Pacu  
+• DevSecOps: GitHub Actions, Jenkins, SonarQube, Snyk, ZAP, TruffleHog  
+• AppSec: Threat modeling (STRIDE), secure design reviews, CI/CD integration  
+• Scripting: Python, Bash, PowerShell – security automation and payload development  
+• Standards & Frameworks: NIST 800-53, SOC 2, MITRE ATT&CK, CIS Benchmarks  
+• Tools: Burp Suite Pro, OWASP ZAP, Nmap, Scout Suite, Veracode, Wireshark  
+• Other: Secret scanning, phishing simulations, internal AppSec training
+
+EXPERIENCE
+
+**Security Engineer**  
+*ProBPM Inc* | Sep 2024 – Present  
+• Conducted 25+ threat models across microservices, reducing high-risk issues by 35%  
+• Remediated 150+ vulnerabilities via secure code reviews (Java, Python, JS) pre-production  
+• Built CI-integrated SAST/DAST pipelines in GitHub Actions, reducing post-deployment issues by 40%  
+• Automated security triage and secret scanning via Python, saving 20+ hours/week  
+• Trained 80+ developers on secure coding, improving adoption by 50%  
+
+**Research Assistant – AppSec & Cloud Security**  
+*University of Louisiana at Lafayette* | Feb 2023 – May 2024  
+• Designed threat models for IoT malware and Zigbee-based devices, reducing threats by 40%  
+• Hardened AWS infra with Terraform, implemented logging standards and detection alerts  
+• Developed Python-based anomaly detection in ELK, increasing incident response visibility  
+• Conducted secure software design reviews aligned with NIST 800-53
+
+**Application Security Engineer**  
+*Network Intelligence* | Sep 2019 – Feb 2023  
+• Performed manual and automated security testing on 80+ web/mobile/cloud applications  
+• Integrated SAST/DAST/SCA tools (SonarQube, ZAP, Snyk) into Jenkins pipelines  
+• Led secure architecture reviews and threat modeling sessions across business units  
+• Automated secret scanning using TruffleHog, reducing leakage risk by 50%  
+• Built dashboards for tracking vulnerability KPIs and remediation metrics  
+
+**Senior Software Developer**  
+*Maktron Global IT Solutions* | Jun 2017 – Sep 2019  
+• Led secure dev of 8+ ASP.NET MVC apps with RBAC and OWASP ASVS compliance  
+• Migrated databases to AWS RDS with encryption and IAM-based access controls  
+• Authored threat-resilient design docs aligned with HIPAA and NIST guidance  
+
+PROJECTS
+
+**DevSecOps Pipeline with AWS**  
+• Automated SAST/DAST with role-based CI triggers, reducing security bugs by 40%  
+• Integrated Okta MFA in CI/CD, hardened Terraform deployments, enforced K8s RBAC  
+• Built real-time dashboards for IAM drift, misconfig alerts, and security posture  
+
+**AWS Cloud Penetration Testing**  
+• Simulated privilege escalation with Pacu and mitigated STS abuse via SCP policies  
+• Created custom Splunk detections for EC2 log abuse, brute-force, and beaconing  
+• Auto-rotated 50+ leaked secrets using TruffleHog and AWS Secrets Manager  
+
+EDUCATION  
+**M.S. in Computer Science**, University of Louisiana at Lafayette, USA  
+Relevant Coursework: Secure DevOps, Cryptography, AppSec, Cloud Security, AI Security  
+
+**B.E. in Electronics & Communication**, Sri Mittapalli College of Engineering, India  
+Final Project: Software Vulnerability Detection via CVE matching  
+
+CERTIFICATIONS  
+• CEH – Certified Ethical Hacker  
+• OSCP – Offensive Security Certified Professional (In Progress)  
+• Medal of Excellence – Cyber Excellence Academy  
+
+ACHIEVEMENTS  
+• Top 5% on HackTheBox CTFs – 200+ cloud/app/network challenges solved  
+• Reduced prod vulnerabilities by 40% via AppSec automation  
+• Awarded for driving org-wide secure coding training and AppSec adoption  
+
+```
