@@ -49,4 +49,45 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 ![Difference between Roles](/Images/Red%20VS%20vulnerabilitity%20vs%20pentest.png)
 
 - **Vulnerability assessments** are generally more automated assessments that focus on identifying, cataloging, and prioritizing known vulnerabilities within an organization's infrastructure. These assessments typically do not involve exploitation but instead focus on the identification of security vulnerabilities. They provide a comprehensive scan of systems, applications, and networks to identify potential security gaps that could be exploited. These scans are often the result of automated scans using vulnerability scanners such as **Nessus** or **OpenVAS**. 
-- The third type of assessment, and the one we will focus on throughout this module, is a **Red Team Assessment**. This describes an advanced, adversarial simulation where security experts, often called the red team, mimic real-world attackers' tactics, techniques, and procedures (TTPs) to test an organization's defenses. The red team's goal is to exploit technical vulnerabilities and challenge every aspect of security, including people and processes, by employing social engineering, phishing, and physical intrusions. Red team assessments focus on stealth and persistence, working to evade detection by the defensive blue team while seeking ways to achieve specific objectives, such as accessing sensitive data or critical systems. This exercise often spans weeks to months, providing an in-depth analysis of an organization's overall resilience against sophisticated threats.
+- The third type of assessment, and the one we will focus on throughout this module, is a **Red Team Assessment**. This describes an advanced, adversarial simulation where security experts, often called the **red team**, mimic real-world attackers' tactics, techniques, and procedures (TTPs) to test an organization's defenses. The red team's goal is to exploit technical vulnerabilities and challenge every aspect of security, including people and processes, by employing social engineering, phishing, and physical intrusions. Red team assessments focus on stealth and persistence, working to evade detection by the defensive **blue team** while seeking ways to achieve specific objectives, such as accessing sensitive data or critical systems. This exercise often spans weeks to months, providing an in-depth analysis of an organization's overall resilience against sophisticated threats.
+
+##### Red Teaming ML-based System
+- Unlike traditional systems, ML-based systems face unique vulnerabilities because they rely on large datasets, statistical inference, and complex model architectures. Thus, red team assessments are often the way to go when assessing the security of ML-based systems, as many advanced attack techniques require more time than a typical penetration test would last. Furthermore, ML-based systems are comprised of various components that interact with each other. Often, security vulnerabilities arise at these interaction points. As such, including all these components in the security assessment is beneficial. Determining the scope of a penetration test for an ML-based system can be difficult. It may inadvertently exclude specific components or interaction points, potentially making particular security vulnerabilities impossible to reveal.'
+
+## Red Teaming ML
+
+#### Attacking ML-based Systems (ML OWASP Top 10)
+- Just like for [Web Applications](https://owasp.org/www-project-top-ten/), [Web APIs](https://owasp.org/www-project-api-security/), and [Mobile Applications](https://owasp.org/www-project-mobile-top-10/), OWASP has published a Top 10 list of security risks regarding the deployment and managment of ML-based Systems, the  [Top 10 for Machine Learning Security](https://owasp.org/www-project-machine-learning-security-top-10/). We will briefly discuss the ten risks to obtain an overview of security issues resulting from ML-based systems.
+
+| ID | Description |
+| :- | :- |
+| ML01	| **Input Manipulation Attack**: Attackers modify input data to cause incorrect or malicious model outputs. |
+| ML02	| **Data Poisoning Attack**: Attackers inject malicious or misleading data into training data, compromising model performance or creating backdoors. |
+| ML03	| **Model Inversion Attack**: Attackers train a separate model to reconstruct inputs from model outputs, potentially revealing sensitive information. |
+| ML04	| **Membership Inference Attack**: Attackers analyze model behavior to determine whether data was included in the model's training data set, potentially revealing sensitive information. |
+| ML05	| **Model Theft**: Attackers train a separate model from interactions with the original model, thereby stealing intellectual property. |
+| ML06	| **AI Supply Chain Attacks**: Attackers exploit vulnerabilities in any part of the ML supply chain. |
+| ML07	| **Transfer Learning Attack**: Attackers manipulate the baseline model that is subsequently fine-tuned by a third-party. This can lead to biased or backdoored models. |
+| ML08	| **Model Skewing**: Attackers skew the model's behavior for malicious purposes, for instance, by manipulating the training data set. |
+| ML09	| **Output Integrity Attack**: Attackers manipulate a model's output before processing, making it look like the model produced a different output. |
+| ML10	| **Model Poisoning**: Attackers manipulate the model's weights, compromising model performance or creating backdoors. |
+
+##### Input Manipulation Attack (ML01)
+- **What**: Attacks that trick an ML model by subtly altering its input data.
+- **How**: Attackers add tiny, often invisible-to-humans changes (perturbations) to normal input data.
+- **Effect**: The model produces incorrect or unexpected results, despite the input looking normal to a person.
+- **Impact**: Can be severe - ranging from financial/reputational damage to safety risks (e.g., causing a self-driving car to misread a stop sign).
+- **Key Point**: The manipulation is specifically designed to fool the AI model while appearing harmless to humans.
+
+- **In short**: Input Manipulation Attacks subtly change data fed into an AI to make it malfunction, potentially with dangerous consequences, even though the altered data looks fine to people.
+
+![ML01-Input Manipulation Attack](/Images/ML01.png)
+
+##### Data Poisoning Attack (ML02)
+- **What**: Attacks that sabotage an ML model during training by injecting malicious or corrupted data into its training dataset.
+- **How**: Attackers add manipulated data points designed to distort what the model learns, compromising its future accuracy or behavior.
+- **Goal**: Cause the model to make specific errors (like misclassifying malware as safe), create hidden "backdoors," or reduce overall performance.
+- **Why Effective**: ML models heavily depend on training data quality, and automated data collection (especially from public/unverified sources) creates vulnerabilities.
+- **Example**: Poisoning an antivirus model's training data to make it classify the attacker's specific malware as safe, creating a dangerous backdoor.
+
+- **In short**: Data Poisoning Attacks corrupt an AI's learning process by tainting its training data, leading to hidden flaws or deliberate errors in its decisions later on.
