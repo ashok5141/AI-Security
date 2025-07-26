@@ -78,13 +78,13 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 
 ![ML01-Input Manipulation Attack](/Images/ML01.png)
 
-##### ML 02 Data Poisoning Attack 
-- 
+##### ML 02 - Data Poisoning Attack 
+- Data Poisoning Attack compromises ML models by injecting malicious data into their training sets, resulting in flawed predictions and compromised security.
 - **Example**: Poisoning an antivirus model's training data to make it classify the attacker's specific malware as safe, creating a dangerous 
 
-##### ML 03
-- 
-- **Example**:
+##### ML 03 - Model Inversion Attack
+- Model inversion attacks aim to construct a target model's training data by analyzing its outputs. Attackers train a seperate model to reverse-engineer the input information from the predictions of the target model. These attacks are especially dangerous when the original training data contains sensitive information, such as medical records or personal details. 
+- **Example**: The more detailed the model's output, the easier it is for an attacker to reconstruct the input data. Defenses include techniques like differential privacy, federated learning and secure multi-party computation, along with access control measure and output sanitization.
 
 ##### ML 04
 - 
