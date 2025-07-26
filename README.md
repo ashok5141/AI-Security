@@ -72,22 +72,38 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 | ML09	| **Output Integrity Attack**: Attackers manipulate a model's output before processing, making it look like the model produced a different output. |
 | ML10	| **Model Poisoning**: Attackers manipulate the model's weights, compromising model performance or creating backdoors. |
 
-##### Input Manipulation Attack (ML01)
-- **What**: Attacks that trick an ML model by subtly altering its input data.
-- **How**: Attackers add tiny, often invisible-to-humans changes (perturbations) to normal input data.
-- **Effect**: The model produces incorrect or unexpected results, despite the input looking normal to a person.
-- **Impact**: Can be severe - ranging from financial/reputational damage to safety risks (e.g., causing a self-driving car to misread a stop sign).
-- **Key Point**: The manipulation is specifically designed to fool the AI model while appearing harmless to humans.
-
-- **In short**: Input Manipulation Attacks subtly change data fed into an AI to make it malfunction, potentially with dangerous consequences, even though the altered data looks fine to people.
+##### ML 01 - Input Manipulation Attack
+- Name suggests that involves attacker or bad guy can subtly altering the data fed to ML model, leading unexpected and potential harmful behaviour. These attacks, often using imperceptible changes, aim to decide the model into making incorrect decisions.
+    - **Example**: Modifying the road signs with small stickers could trick self-driving car systems, highlighting serious risks to safty and reliability. 
 
 ![ML01-Input Manipulation Attack](/Images/ML01.png)
 
-##### Data Poisoning Attack (ML02)
-- **What**: Attacks that sabotage an ML model during training by injecting malicious or corrupted data into its training dataset.
-- **How**: Attackers add manipulated data points designed to distort what the model learns, compromising its future accuracy or behavior.
-- **Goal**: Cause the model to make specific errors (like misclassifying malware as safe), create hidden "backdoors," or reduce overall performance.
-- **Why Effective**: ML models heavily depend on training data quality, and automated data collection (especially from public/unverified sources) creates vulnerabilities.
-- **Example**: Poisoning an antivirus model's training data to make it classify the attacker's specific malware as safe, creating a dangerous backdoor.
+##### ML 02 Data Poisoning Attack 
+- 
+- **Example**: Poisoning an antivirus model's training data to make it classify the attacker's specific malware as safe, creating a dangerous 
 
-- **In short**: Data Poisoning Attacks corrupt an AI's learning process by tainting its training data, leading to hidden flaws or deliberate errors in its decisions later on.
+##### ML 03
+- 
+- **Example**:
+
+##### ML 04
+- 
+- **Example**:
+##### ML 05
+- 
+- **Example**:
+##### ML 06
+- 
+- **Example**:
+##### ML 07
+- 
+- **Example**:
+##### ML 08
+- 
+- **Example**:
+##### ML 09
+- 
+- **Example**:
+##### ML 10
+- 
+- **Example**:
