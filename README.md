@@ -83,27 +83,37 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 - **Example**: Poisoning an antivirus model's training data to make it classify the attacker's specific malware as safe, creating a dangerous 
 
 ##### ML 03 - Model Inversion Attack
-- Model inversion attacks aim to construct a target model's training data by analyzing its outputs. Attackers train a seperate model to reverse-engineer the input information from the predictions of the target model. These attacks are especially dangerous when the original training data contains sensitive information, such as medical records or personal details. 
+- Model inversion attacks aim to reconstruct a target model's training data by analyzing its outputs. Attackers train a seperate model to reverse-engineer the input information from the predictions of the target model. These attacks are especially dangerous when the original training data contains sensitive information, such as medical records or personal details. 
 - **Example**: The more detailed the model's output, the easier it is for an attacker to reconstruct the input data. Defenses include techniques like differential privacy, federated learning and secure multi-party computation, along with access control measure and output sanitization.
 
-##### ML 04
-- 
-- **Example**:
-##### ML 05
-- 
-- **Example**:
-##### ML 06
-- 
-- **Example**:
-##### ML 07
-- 
-- **Example**:
-##### ML 08
-- 
-- **Example**:
-##### ML 09
-- 
-- **Example**:
-##### ML 10
-- 
-- **Example**:
+##### ML 04 - Membership Inference Attack
+- Model inversion attacks aim to reconstruct a target model's training data by analyzing its outputs. Attackers train a separate model to reverse-engineer the input information from the predictions of the target model. These attacks are especially dangerous when the original training data contains sensitive information, such as medical records or personal details. The more detailed the model's output, the easier it is for an attacker to reconstruct the input data. Defenses include techniques like differential privacy, federated learning, and secure multi-party computation, along with access control measures and output sanitization.
+- **Example**: The attacker wants to reconstruct information about the original data that was used to train a machine learning (ML) model. For example, they might want to know details about patients whose medical data was used to train a cancer detection system.
+
+![ML04](/Images/ML04.png)
+
+##### ML 05 - Model Theft
+- This type of attack where an adversary recreates a copy of an ML model without direct access to its internal workings. This is achieved by repeatedly querying the target model with inputs and analyzing its outputs to replicate its functionality. Model theft poses a significant threat, potentially resulting in financial losses, intellectual property theft, competitive disadvantages, and reputational damage. For example, stealing a proprietary text generation model could enable a competitor to offer a similar service without incurring development costs.
+- **Example**: Imagine a company that has developed a unique AI-powered text generation service. An attacker could repeatedly send carefully constructed text prompts to this service and collect the generated output. By analyzing enough of these input-output pairs, the attacker could train their own text generation model that produces similar results, effectively stealing the company's intellectual property.
+
+![ML05](/Images/ML05.png)
+
+##### ML 06 - AI Supply Chain Attacks
+- AI supply chain attacks compromise machine learning models or their data by exploiting vulnerabilities in the interconnected components involved in the model's creation, deployment, or maintenance. Attackers can tamper with data sources, libraries, or pre-trained models to introduce malicious code or alter the model's behavior.
+- **Example**: An attacker modifies a popular open-source library used to develop an AI-powered fraud detection system, embedding a backdoor that allows specific fraudulent transactions to bypass detection.
+
+##### ML 07 - Transfer Learning Attack
+- exploit vulnerabilities in pre-trained models by injecting malicious code or biases during the transfer learning process. These malicious elements can persist even when fine-tuning the model with clean data, potentially leading to security issues like backdoors or manipulated model behavior.
+- **Example**: An attacker could poison a publicly available pre-trained facial recognition model. A company using this model for transfer learning in its facial recognition system might inherit a backdoor, allowing the attacker to bypass authentication with specific manipulated images
+
+##### ML 08 - Model Skewing
+- An attack where an adversary injects biased or incorrectly labeled data into an ML model's training set to deliberately influence its output in a direction that favors their objectives, potentially leading to incorrect predictions or malicious outcomes
+- **Example**: An attacker could train an antivirus model to classify specific malware as benign by injecting the malware into the training data with a benign label, creating a backdoor to bypass detection.
+
+##### ML 09 - Output Integrity Attack
+- This  involves an attacker intercepting and altering the output generated by an ML model `before` it is processed by a downstream system or user. The ML model itself remains uncompromised, making detection challenging.
+- **Example**: An attacker uploads malware to a system defended by an ML-based antivirus. When the ML model correctly identifies the file as malware, the attacker intercepts the output and changes the classification to `benign.` The antivirus then fails to delete the malware, leaving the system vulnerable.
+
+##### ML 10 - Model Poisoning
+- Attacks directly manipulate an ML model's internal parameters (weights and biases) to introduce malicious biases or behaviors. This requires direct access to the model's internal structure and sophisticated manipulation to achieve targeted malicious outcomes without overtly degrading overall performance.
+- **Example**: An attacker gains access to an ML model used in military drones for target identification. They subtly modify the model's parameters to misclassify a specific friendly vehicle type as an enemy, potentially leading to friendly fire incidents in certain scenarios.
