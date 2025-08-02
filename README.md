@@ -122,7 +122,7 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 ## Attacking Text Generation (LLM OWASP Top 10)
 > WHen your using systems relying on generative AI, let us discuss vulnerabilities specific to text generation are `Large Language Models (LLMs)`. [PDF Version](Images/OWASP-Top-10-for-LLMs-2023-v1_1.pdf)
 
-# OWASP Top 10 for Large Language Model (LLM) Applications – 2025
+
 
 | #    | Vulnerability    | Description  | Subtypes     | Attack Example / How Exploited          | Mitigation Strategies          |
 |------|------------------|--------------|--------------|-----------------------------------------|--------------------------------|
@@ -136,3 +136,13 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 | LLM08| Excessive Agency                        | Granting the LLM agents or tools excessive autonomy leads to unreliable, unsafe, or unintended actions beyond intended user scope.                   | Unsafe Automation, Unchecked Tasks | LLM agent is allowed to execute code, make purchases, or issue commands without human review or guardrails.                                                            | Human-in-the-loop approvals, explicit guardrails for dangerous actions, granular permission management, prompt output verification.                                         |
 | LLM09| Overreliance on LLM Output              | Blindly trusting LLM outputs causes flawed decision-making, introducing risk for business logic errors, legal exposure, or safety issues.            | Critical Trust, Decision-Automation| System auto-approves LLM-generated financial transactions or contracts; mistakes go unchecked.                                                                         | Never make high-stakes automated decisions solely based on LLM, require human review, establish escalation protocols, warn users on model limitations.                      |
 | LLM10| Model Theft / Extraction                | Unauthorized parties gain access to proprietary LLMs, weights, or architectures—leading to IP theft or unauthorized model use.                      | Model Extraction, Credential Leak  | Attacker exfiltrates model weights by abusing accessible APIs or reconstructs model via repeated probing.                                                               | Secure model endpoints via authentication, limit access to sensitive artifacts, monitor for data exfiltration, watermark and fingerprint models, legal NDA enforcement.     |
+
+## Google's Secure AI Framework (SAIF)
+> [Google's Secure AI Framework SAIF](https://saif.google/), provide more actionable priniciples for secure development of entire AI pipeline from data collection to model deployment. While SAIF provides a list of security risks similar to OWASP. It goes even further and provides a holistic approch to development secure AI applications. This includes the integration of security and privacy in the entire AI pipeline. OWASP provides a targated, technical checklist of vulnrabilities, where as SAIF offers a broader presective on secure AI development as whole.
+
+##### SAIF Areas and Components
+- In SAIF, there are four different areas of secure AI development. Eacb comprises [Components](https://saif.google/secure-ai-framework/components)
+    - **Data**: This area consists of all components relating to data such as `data sources`, `data filtering and processing` and `training data`.
+    - **Infrastructure**: This area relates to the hardware on which the application is hosted, as well as data storage and development platforms. Infrastructure components are the `Model Frameworks and code` required to run the AI application, the processes of `Training, Tuning and Evaluation, Data and Model Storage` and the process of deploying a model `(Model Serving)`.
+    - **Model**:
+    - **Application**:
