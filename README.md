@@ -92,6 +92,7 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 
 ![ML04](/Images/ML04.png)
 
+
 ##### ML 05 - Model Theft
 - This type of attack where an adversary recreates a copy of an ML model without direct access to its internal workings. This is achieved by repeatedly querying the target model with inputs and analyzing its outputs to replicate its functionality. Model theft poses a significant threat, potentially resulting in financial losses, intellectual property theft, competitive disadvantages, and reputational damage. For example, stealing a proprietary text generation model could enable a competitor to offer a similar service without incurring development costs.
 - **Example**: Imagine a company that has developed a unique AI-powered text generation service. An attacker could repeatedly send carefully constructed text prompts to this service and collect the generated output. By analyzing enough of these input-output pairs, the attacker could train their own text generation model that produces similar results, effectively stealing the company's intellectual property.
