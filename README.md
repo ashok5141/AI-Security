@@ -147,3 +147,21 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
     - **Infrastructure**: This area relates to the hardware on which the application is hosted, as well as data storage and development platforms. Infrastructure components are the `Model Frameworks and code` required to run the AI application, the processes of `Training, Tuning and Evaluation, Data and Model Storage` and the process of deploying a model `(Model Serving)`.
     - **Model**: This is the central area of any AI application. It comprises the `Model, Input Handling` and `Output Handling` components.
     - **Application**: This area relates to the interaction with the AI application, i.e., it consists of the `Applications` interacting with the AI deployment and potential `Agents` or `Plugins` used by the AI development.
+
+##### SAIF Risk
+> Like OWASP Top 10 for LLMs, SAIF has the [Risks](https://saif.google/secure-ai-framework/risks) that may arises in AI applications. Here is an overview of the risks included in SAIF. Many are included in the OWASP ML and LLMs Top 10.
+- **Data Poisoning**:
+- **Unauthorized Training Data**:
+- **Model Source Tempering**:
+- **Excessive Data Handling**:
+- **Model Exfiltration**:
+- **Model Deployment Tempering**: 
+- **Denial of ML Service**: 
+- **Model Reverse Engineering**: 
+- **Insecure Intrgrated Component**: 
+- **Prompt Injection**: 
+- **Model Evasion**: 
+- **Sensitive Data Disclosure**: 
+- **Inferred Sensitive Data**:
+- **Insecure Model Output**: 
+- **Rogue Actions** 
