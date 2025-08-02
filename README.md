@@ -144,5 +144,5 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 - In SAIF, there are four different areas of secure AI development. Eacb comprises [Components](https://saif.google/secure-ai-framework/components)
     - **Data**: This area consists of all components relating to data such as `data sources`, `data filtering and processing` and `training data`.
     - **Infrastructure**: This area relates to the hardware on which the application is hosted, as well as data storage and development platforms. Infrastructure components are the `Model Frameworks and code` required to run the AI application, the processes of `Training, Tuning and Evaluation, Data and Model Storage` and the process of deploying a model `(Model Serving)`.
-    - **Model**:
-    - **Application**:
+    - **Model**: This is the central area of any AI application. It comprises the `Model, Input Handling` and `Output Handling` components.
+    - **Application**: This area relates to the interaction with the AI application, i.e., it consists of the `Applications` interacting with the AI deployment and potential `Agents` or `Plugins` used by the AI development.
