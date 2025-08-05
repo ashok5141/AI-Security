@@ -165,3 +165,29 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 - **Inferred Sensitive Data**: The model provides sensitive information that it did not have access to by inferring it from training data or prompts. The key difference to the previous risk is that the model does not have access to the sensitive data but provides it by inferring it.
 - **Insecure Model Output**: Model output is handled insecurely, potentially resulting in injection vulnerabilities.
 - **Rogue Actions**: Attackers exploit insufficiently restricted model access to cause harm.
+
+##### SAIF Controls
+> SAIF specifies how to mitigate each risk and who is responsible for this mitigation.
+
+- The party responsible can either be the `model creator`, i.e., the party developing the model, or the `model consumer`, i.e., the party using the model in an AI application.
+- For instance, if `HackTheBox` used `Google's Gemini model` for an AI chatbot, `Google` would be the model creator, while `HackTheBox` would be the model consumer.
+- These mitigations are called [controls](https://saif.google/secure-ai-framework/controls). Each control is mapped to one of the previously discussed risks. 
+- For instance, here are a few example controls from SAIF:
+
+    - **Input Validation and Sanitization**: Detect malicious queries and react appropriately, for instance, by blocking or restricting them.
+        - Risk mapping: `Prompt Injection`
+        - Implemented by: `Model Creators, Model Consumers`
+    - **Output Validation and Sanitization**: Validate or sanitize model output before processing by the application.
+        - Risk mapping: `Prompt Injection, Rogue Actions, Sensitive Data Disclosure, Inferred Sensitive Data`
+        - Implemented by: `Model Creators, Model Consumers`
+    - Adversarial Training and Testing: Train the model on adversarial inputs to strengthen resilience against attacks.
+        - Risk mapping: `Model Evasion, Prompt Injection, Sensitive Data Disclosure, Inferred Sensitive Data, Insecure Model Output`
+        - Implemented by: `Model Creators, Model Consumers`
+    - **Adversarial Training and Testing**: Train the model on adversarial inputs to strengthen resilience against attacks.
+        - Risk mapping: `Model Evasion, Prompt Injection, Sensitive Data Disclosure, Inferred Sensitive Data, Insecure Model Output`
+        - Implemented by: `Model Creators, Model Consumers`
+
+##### SAIF Rsik Map
+> The [Risk Map](https://saif.google/secure-ai-framework/saif-map) is the central SAIF component encompassing information about components, risks, and controls in a single place. It provides an overview of the different components interacting in an AI application, the risks that arise in each component, and how to mitigate them. Further, the map provides information about where a security risk is introduced (`risk introduction`), where the risk may be exploited (`risk exposure`), and where a risk may be mitigated (`risk mitigation`).
+
+![SAIF Risk Map](https://academy.hackthebox.com/storage/modules/294/saif_riskmap.png)
