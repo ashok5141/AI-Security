@@ -150,18 +150,18 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 
 ##### SAIF Risk
 > Like OWASP Top 10 for LLMs, SAIF has the [Risks](https://saif.google/secure-ai-framework/risks) that may arises in AI applications. Here is an overview of the risks included in SAIF. Many are included in the OWASP ML and LLMs Top 10.
-- **Data Poisoning**:
-- **Unauthorized Training Data**:
-- **Model Source Tempering**:
-- **Excessive Data Handling**:
-- **Model Exfiltration**:
-- **Model Deployment Tempering**: 
-- **Denial of ML Service**: 
-- **Model Reverse Engineering**: 
-- **Insecure Intrgrated Component**: 
-- **Prompt Injection**: 
-- **Model Evasion**: 
-- **Sensitive Data Disclosure**: 
-- **Inferred Sensitive Data**:
-- **Insecure Model Output**: 
-- **Rogue Actions** 
+- **Data Poisoning**: Attackers inject malicious or misleading data into the model's training data, compromising performance or creating backdoors.
+- **Unauthorized Training Data**: The model is trained on unauthorized data, resulting in legal or ethical issues.
+- **Model Source Tempering**: Attackers manipulate the model's source code or weights, compromising performance or creating backdoors.
+- **Excessive Data Handling**: Data collection or retention goes beyond what is allowed in the corresponding privacy policies, resulting in legal issues.
+- **Model Exfiltration**: Attackers gain unauthorized access to the model itself, stealing intellectual property and potentially causing financial harm.
+- **Model Deployment Tempering**: Attackers manipulate components used for model deployment, compromising performance or creating backdoors.
+- **Denial of ML Service**:  Attackers feed inputs to the model that result in high resource consumption, potentially causing disruptions to the ML service.
+- **Model Reverse Engineering**: Attackers gain unauthorized access to the model itself by analyzing its inputs and outputs, stealing intellectual property, and potentially causing financial harm.
+- **Insecure Intrgrated Component**: Attackers exploit security vulnerabilities in software interacting with the model, such as plugins.
+- **Prompt Injection**: Attackers manipulate the model's input directly or indirectly to cause malicious or illegal behavior.
+- **Model Evasion**: Attackers manipulate the model's input by applying slight perturbations to cause incorrect inference results.
+- **Sensitive Data Disclosure**: Attackers trick the model into revealing sensitive information in the response.
+- **Inferred Sensitive Data**: The model provides sensitive information that it did not have access to by inferring it from training data or prompts. The key difference to the previous risk is that the model does not have access to the sensitive data but provides it by inferring it.
+- **Insecure Model Output**: Model output is handled insecurely, potentially resulting in injection vulnerabilities.
+- **Rogue Actions**: Attackers exploit insufficiently restricted model access to cause harm.
