@@ -243,7 +243,7 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 - Knowing the model’s behavior makes it easier to plan **further targeted attacks**.
 
 - **Crafting Malicious Inputs (Prompt Injection)**
-    - Attackers create special input data**** that manipulates the model into **behaving incorrectly**.
+    - Attackers create **special input data** that manipulates the model into **behaving incorrectly**.
     - Possible impacts:
         - **Sensitive data leakage** (e.g., revealing training data).
         - **Generation of harmful/illegal content**.
@@ -262,3 +262,63 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
         - **Evade detection systems** by using the stolen model to test attacks.
     - Techniques:
         - **Adaptive querying** – adjusting queries based on previous responses to improve efficiency.
+
+### Attacking Data Components
+
+1. What is the Data Component?
+- Includes **all data the model uses** – both **training data** (used to build the model) and **inference data** (used during predictions).  
+- High-quality, representative data is **critical** for model accuracy and reliability.  
+- Data leaks can cause **legal issues** (e.g., GDPR) if it contains sensitive or personal data.  
+
+2. Risks to the Data Component
+
+- a) Poor or Biased Training Data
+- Unrepresentative or biased datasets can cause:
+  - Poor model performance.
+  - Discriminatory or harmful outputs.
+- **Example:** A healthcare AI trained mostly on male patient data may give **inaccurate diagnoses** for female patients.  
+
+- b) Data Poisoning
+- Attackers **manipulate training data** to control or change model behavior.  
+- Impacts:
+  - Misleading or biased outputs.
+  - Harmful or false content generation.
+- **Example:** Adding fake legal cases to a law-focused AI to produce wrong legal advice.  
+
+- c) Backdoor Attacks
+- Malicious triggers embedded in data cause **specific bad outputs** when a certain input is given.
+- **Example:** When the AI sees a special keyword, it outputs sensitive company data.  
+
+- d) Data Leaks
+- Large datasets are attractive targets; leaks can:
+  - Reveal **PII or sensitive business data**.
+  - Cause financial loss and regulatory penalties.
+  - Allow reverse-engineering of the model.
+- **Example:** Stolen proprietary dataset used by a competitor to build a rival model.
+
+3. Tactics, Techniques, and Procedures (TTPs)
+
+- a) Direct Data Manipulation
+- Insert poisoned or fake records during data collection or preprocessing.
+- Common in **federated learning**, where multiple sources update a shared model.
+
+- b) Exploiting Storage & Transmission Weaknesses
+- Attacks on:
+  - Poorly configured **cloud storage** (e.g., open S3 buckets).
+  - Lack of **encryption** in transit or at rest.
+  - Insecure data pipelines.
+  - Vulnerable APIs.
+
+- c) Supply Chain Attacks
+- Compromise **third-party vendors** providing training data to inject malicious content before it reaches the organization.  
+
+- d) Insider Threats
+- Employees or contractors with legitimate access **steal or leak data**.
+- Can be motivated by financial gain, espionage, or sabotage.
+- **Example:** Data scientist downloads full customer dataset to sell on the dark web.
+
+4. Real-World Example
+- **Case:** In 2020, attackers poisoned AI datasets for image recognition in research projects.  
+- **Impact:** Models misclassified stop signs as speed limit signs, creating dangerous implications for autonomous vehicles.  
+
+
