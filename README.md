@@ -238,27 +238,27 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 ![Attacking model Components](https://academy.hackthebox.com/storage/modules/294/diagram_5.png)
 
 ##### Tactics, Techniques, and Procedures (TTPs)
-- Adversaries test the model with many different inputs and study its outputs.
-- This helps them understand how the model processes data and where weaknesses might exist.
-- Knowing the model’s behavior makes it easier to plan further targeted attacks.
+- Adversaries **test the model with many different inputs** and study its outputs.
+- This helps them **understand how the model processes data** and where weaknesses might exist.
+- Knowing the model’s behavior makes it easier to plan **further targeted attacks**.
 
-- Crafting Malicious Inputs (Prompt Injection)
-    - Attackers create special input data that manipulates the model into behaving incorrectly.
+- **Crafting Malicious Inputs (Prompt Injection)**
+    - Attackers create special input data**** that manipulates the model into **behaving incorrectly**.
     - Possible impacts:
-        - Sensitive data leakage (e.g., revealing training data).
-        - Generation of harmful/illegal content.
-        - Financial loss if outputs cause incorrect decisions.
-        - Reputation damage if harmful content becomes public.
+        - **Sensitive data leakage** (e.g., revealing training data).
+        - **Generation of harmful/illegal content**.
+        - **Financial loss** if outputs cause incorrect decisions.
+        - **Reputation damage** if harmful content becomes public.
 
-- Model Extraction Attacks
-    - Goal: Steal or clone the model by learning its internal logic through queries.
+- **Model Extraction Attacks**
+    - Goal: **Steal or clone the model** by learning its internal logic through queries.
     - Process:
-        - Send strategic queries that cover a wide input range.
+        - Send **strategic queries** that cover a wide input range.
         - Record and analyze the model’s responses.
-        - Train a substitute model that mimics the original’s behavior.
+        - Train a **substitute model** that mimics the original’s behavior.
     - Outcomes:
-        - Bypass IP protection and use the model without paying training costs.
-        - Create poisoned replicas for malicious use.
-        - Evade detection systems by using the stolen model to test attacks.
+        - **Bypass IP protection** and use the model without paying training costs.
+        - Create **poisoned replicas** for malicious use.
+        - **Evade detection systems** by using the stolen model to test attacks.
     - Techniques:
-        - Adaptive querying – adjusting queries based on previous responses to improve efficiency.
+        - **Adaptive querying** – adjusting queries based on previous responses to improve efficiency.
