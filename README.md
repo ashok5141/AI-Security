@@ -265,12 +265,12 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 
 ### Attacking Data Components
 
-1. What is the Data Component?
+##### 1. What is the Data Component?
 - Includes **all data the model uses** – both **training data** (used to build the model) and **inference data** (used during predictions).  
 - High-quality, representative data is **critical** for model accuracy and reliability.  
 - Data leaks can cause **legal issues** (e.g., GDPR) if it contains sensitive or personal data.  
 
-2. Risks to the Data Component
+##### 2. Risks to the Data Component
 
 - a) Poor or Biased Training Data
 - Unrepresentative or biased datasets can cause:
@@ -296,7 +296,7 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
   - Allow reverse-engineering of the model.
 - **Example:** Stolen proprietary dataset used by a competitor to build a rival model.
 
-3. Tactics, Techniques, and Procedures (TTPs)
+##### 3. Tactics, Techniques, and Procedures (TTPs)
 
 - a) Direct Data Manipulation
 - Insert poisoned or fake records during data collection or preprocessing.
@@ -317,8 +317,8 @@ Is a subfield of AI that focuses on enabling systems to learn from data and impr
 - Can be motivated by financial gain, espionage, or sabotage.
 - **Example:** Data scientist downloads full customer dataset to sell on the dark web.
 
-4. Real-World Example
+##### 4. Real-World Example
 - **Case:** In 2020, attackers poisoned AI datasets for image recognition in research projects.  
 - **Impact:** Models misclassified stop signs as speed limit signs, creating dangerous implications for autonomous vehicles.  
 
-
+![Attacking Data Components](https://academy.hackthebox.com/storage/modules/294/diagram_2.png)
